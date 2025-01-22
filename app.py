@@ -13,3 +13,6 @@ raw_data['position'] = raw_data['position'].str.lower()
 
 # Extract date from the timestamp
 raw_data['date'] = raw_data['timestamp'].dt.date
+
+# Calculate the datewise total duration for each 'inside' and 'outside'
+duration_summary = raw_data.groupby(['date', 'position'])['sensor'].sum().unstack(fill_value=0).stack().reset_index(name='total_duration')
