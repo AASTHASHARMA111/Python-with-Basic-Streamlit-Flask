@@ -10,3 +10,6 @@ raw_data['timestamp'] = pd.to_datetime(raw_data['date'].astype(str) + ' ' + raw_
 
 # Convert the 'position' column to lowercase for consistency
 raw_data['position'] = raw_data['position'].str.lower()
+
+# Extract date from the timestamp
+raw_data['date'] = raw_data['timestamp'].dt.date
