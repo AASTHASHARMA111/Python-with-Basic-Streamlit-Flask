@@ -19,3 +19,6 @@ duration_summary = raw_data.groupby(['date', 'position'])['sensor'].sum().unstac
 
 # Calculate the datewise number of picking and placing activities
 activity_summary = raw_data.groupby(['date', 'activity'])['activity'].count().reset_index(name='count')
+
+# Save the processed data to CSV files
+duration_summary.to_csv('duration_summary.csv', index=False)
