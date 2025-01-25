@@ -22,3 +22,4 @@ activity_summary = raw_data.groupby(['date', 'activity'])['activity'].count().re
 
 # Save the processed data to CSV files
 duration_summary.to_csv('duration_summary.csv', index=False)
+activity_summary.to_csv('activity_summary.csv', index=False)
