@@ -27,3 +27,5 @@ activity_summary.to_csv('activity_summary.csv', index=False)
 # Display the processed data (optional)
 print(duration_summary.head(), activity_summary.head())
 
+app = Flask(__name__)
+
