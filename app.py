@@ -16,3 +16,6 @@ raw_data['date'] = raw_data['timestamp'].dt.date
 
 # Calculate the datewise total duration for each 'inside' and 'outside'
 duration_summary = raw_data.groupby(['date', 'position'])['sensor'].sum().unstack(fill_value=0).stack().reset_index(name='total_duration')
+
+# Calculate the datewise number of picking and placing activities
+activity_summary = raw_data.groupby(['date', 'activity'])['activity'].count().reset_index(name='count')
