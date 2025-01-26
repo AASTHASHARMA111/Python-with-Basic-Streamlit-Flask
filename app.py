@@ -29,3 +29,5 @@ print(duration_summary.head(), activity_summary.head())
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
