@@ -32,3 +32,6 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # Load processed data
+    duration_summary = pd.read_csv('duration_summary.csv')
+    activity_summary = pd.read_csv('activity_summary.csv')
+
