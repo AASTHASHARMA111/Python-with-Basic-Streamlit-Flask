@@ -35,3 +35,8 @@ def index():
     duration_summary = pd.read_csv('duration_summary.csv')
     activity_summary = pd.read_csv('activity_summary.csv')
 
+    # Convert to dictionaries for easy rendering in HTML
+    duration_summary = duration_summary.to_dict(orient='records')
+    activity_summary = activity_summary.to_dict(orient='records')
+
+
