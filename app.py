@@ -39,4 +39,7 @@ def index():
     duration_summary = duration_summary.to_dict(orient='records')
     activity_summary = activity_summary.to_dict(orient='records')
 
+    return render_template('index.html', durations=duration_summary, activities=activity_summary)
+
+
 
