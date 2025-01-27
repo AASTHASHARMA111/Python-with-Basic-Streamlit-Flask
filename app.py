@@ -41,5 +41,9 @@ def index():
 
     return render_template('index.html', durations=duration_summary, activities=activity_summary)
 
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
 
 
