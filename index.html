@@ -107,3 +107,23 @@
                 {% endfor %}
             </table>
         </div>
+        <div class="table-container">
+            <h1>Datewise Number of Picking and Placing Activities</h1>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Activity</th>
+                    <th>Count</th>
+                </tr>
+                {% for row in activities %}
+                <tr>
+                    <td>{{ row['date'] }}</td>
+                    <td>{{ row['activity'] }}</td>
+                    <td>{{ row['count'] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>
