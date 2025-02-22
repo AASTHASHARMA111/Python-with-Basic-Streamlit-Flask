@@ -88,3 +88,22 @@
                 </ul>
             </nav>
         </div>
+    </header>
+    <div class="container">
+        <div class="table-container">
+            <h1>Datewise Total Duration for Each Inside and Outside</h1>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Position</th>
+                    <th>Total Duration</th>
+                </tr>
+                {% for row in durations %}
+                <tr>
+                    <td>{{ row['date'] }}</td>
+                    <td>{{ row['position'] }}</td>
+                    <td>{{ row['total_duration'] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
